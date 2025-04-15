@@ -2398,6 +2398,10 @@ We carry &lt;a href=”https://www.sparkfun.com/products/14204”&gt;200mm&lt;/a
 <classes>
 <class number="0" name="default" width="0" drill="0">
 </class>
+<class number="1" name="DELIMITERS" width="0" drill="0">
+</class>
+<class number="2" name="POWER" width="0.3" drill="0">
+</class>
 </classes>
 <parts>
 <part name="USBC-ESD1" library="DeskAssistant v19 v1dsa" library_urn="urn:adsk.wipprod:fs.file:vf.pPVd7WPfRHmc6C1SqSOzyA" deviceset="SAMACSYS_PARTS_USB4110-GF-A" device=""/>
@@ -2568,29 +2572,29 @@ We carry &lt;a href=”https://www.sparkfun.com/products/14204”&gt;200mm&lt;/a
 <sheets>
 <sheet>
 <plain>
-<text x="-175.26" y="203.2" size="2.54" layer="91">USB C connector &amp; ESD protection</text>
-<text x="-17.78" y="205.74" size="2.54" layer="91" rot="R180">LDO Voltage Regulator</text>
-<text x="40.64" y="203.2" size="2.54" layer="91">SD Card</text>
-<text x="154.94" y="139.7" size="2.54" layer="91">Display Type Selector
+<text x="-175.26" y="203.2" size="2.54" layer="97">USB C connector &amp; ESD protection</text>
+<text x="-17.78" y="205.74" size="2.54" layer="97" rot="R180">LDO Voltage Regulator</text>
+<text x="40.64" y="203.2" size="2.54" layer="97">SD Card</text>
+<text x="154.94" y="139.7" size="2.54" layer="97">Display Type Selector
 </text>
-<text x="-162.56" y="142.24" size="2.54" layer="91">E-Paper Drive Circuit</text>
-<text x="-40.64" y="142.24" size="2.54" layer="91">Li-Po Battery Charging Controller</text>
-<text x="60.96" y="139.7" size="2.54" layer="91">ESP32 C6
+<text x="-162.56" y="142.24" size="2.54" layer="97">E-Paper Drive Circuit</text>
+<text x="-40.64" y="142.24" size="2.54" layer="97">Li-Po Battery Charging Controller</text>
+<text x="60.96" y="139.7" size="2.54" layer="97">ESP32 C6
 </text>
-<text x="-175.26" y="83.82" size="2.54" layer="91">E-Paper Display Header</text>
-<text x="7.62" y="33.02" size="2.54" layer="91">EPD Power</text>
-<text x="-78.74" y="83.82" size="2.54" layer="91">Environmental Sensor BME688</text>
-<text x="7.62" y="81.28" size="2.54" layer="91">Voltage Supervisor + Reset &amp;
+<text x="-175.26" y="83.82" size="2.54" layer="97">E-Paper Display Header</text>
+<text x="7.62" y="33.02" size="2.54" layer="97">EPD Power</text>
+<text x="-78.74" y="83.82" size="2.54" layer="97">Environmental Sensor BME688</text>
+<text x="7.62" y="81.28" size="2.54" layer="97">Voltage Supervisor + Reset &amp;
 Boot / IO Button</text>
-<text x="132.08" y="205.74" size="2.54" layer="91">Battery ChargeLevel</text>
-<text x="63.5" y="30.48" size="2.54" layer="91">RTC Module DS3231SN</text>
-<text x="124.46" y="83.82" size="2.54" layer="91">Test Pads</text>
-<text x="17.78" y="-7.62" size="2.54" layer="91">Qwiic /
+<text x="132.08" y="205.74" size="2.54" layer="97">Battery ChargeLevel</text>
+<text x="63.5" y="30.48" size="2.54" layer="97">RTC Module DS3231SN</text>
+<text x="124.46" y="83.82" size="2.54" layer="97">Test Pads</text>
+<text x="17.78" y="-7.62" size="2.54" layer="97">Qwiic /
 Stemma QT</text>
-<text x="-175.26" y="-5.08" size="2.54" layer="91">SPI ESD Protection Lines</text>
-<text x="-78.74" y="-5.08" size="2.54" layer="91">External NORFlash64MB</text>
+<text x="-175.26" y="-5.08" size="2.54" layer="97">SPI ESD Protection Lines</text>
+<text x="-78.74" y="-5.08" size="2.54" layer="97">External NORFlash64MB</text>
 <text x="162.56" y="-27.94" size="2.54" layer="94">drawn by: Negrea Andrei</text>
-<text x="162.56" y="-33.02" size="2.54" layer="94">DeskAssistant v15</text>
+<text x="165.1" y="-33.02" size="2.54" layer="94">DeskAssistant v15</text>
 </plain>
 <instances>
 <instance part="USBC-ESD1" gate="G$1" x="-139.7" y="180.34" smashed="yes">
@@ -3222,9 +3226,14 @@ Stemma QT</text>
 </instance>
 </instances>
 <busses>
+<bus name="B$1">
+<segment>
+<wire x1="-81.28" y1="88.9" x2="-81.28" y2="-0.677296875" width="0.1524" layer="91"/>
+</segment>
+</bus>
 </busses>
 <nets>
-<net name="VBUS" class="0">
+<net name="VBUS" class="2">
 <segment>
 <pinref part="PFMF.050.1" gate="G$1" pin="2"/>
 <wire x1="-162.56" y1="193.04" x2="-167.64" y2="193.04" width="0.1524" layer="91"/>
@@ -3280,7 +3289,7 @@ Stemma QT</text>
 <label x="-121.92" y="193.04" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="VUSB" class="0">
+<net name="VUSB" class="2">
 <segment>
 <wire x1="-149.86" y1="177.8" x2="-139.7" y2="177.8" width="0.1524" layer="91"/>
 <pinref part="USBC-ESD1" gate="G$1" pin="A4"/>
@@ -3786,7 +3795,7 @@ Stemma QT</text>
 <label x="134.62" y="124.46" size="1.4224" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="VBAT" class="0">
+<net name="VBAT" class="2">
 <segment>
 <pinref part="Q-LDO" gate="G$1" pin="D"/>
 <wire x1="-35.56" y1="195.58" x2="-35.56" y2="198.12" width="0.1524" layer="91"/>
@@ -3817,7 +3826,7 @@ Stemma QT</text>
 <label x="147.32" y="73.66" size="1.27" layer="95" rot="R90" xref="yes"/>
 </segment>
 </net>
-<net name="3V3" class="0">
+<net name="3V3" class="2">
 <segment>
 <pinref part="LDO-VR" gate="G$1" pin="VOUT"/>
 <wire x1="17.78" y1="170.18" x2="20.32" y2="170.18" width="0.1524" layer="91"/>
@@ -4129,7 +4138,7 @@ Stemma QT</text>
 <label x="-116.84" y="10.16" size="1.4224" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="EPD_3V3" class="0">
+<net name="EPD_3V3" class="2">
 <segment>
 <pinref part="C-EPAP-DRIV" gate="G$1" pin="1"/>
 <wire x1="-170.18" y1="111.76" x2="-170.18" y2="121.92" width="0.1524" layer="91"/>
@@ -4536,7 +4545,7 @@ Stemma QT</text>
 <label x="-10.16" y="35.56" size="1.4224" layer="95" rot="R90" xref="yes"/>
 </segment>
 </net>
-<net name="EPD_3V3_C" class="0">
+<net name="EPD_3V3_C" class="2">
 <segment>
 <pinref part="ESP32" gate="G$1" pin="IO20"/>
 <wire x1="127" y1="109.22" x2="134.62" y2="109.22" width="0.1524" layer="91"/>
@@ -4697,72 +4706,6 @@ Stemma QT</text>
 <pinref part="VOL-SUPER" gate="G$1" pin="CT"/>
 </segment>
 </net>
-<net name="N$8" class="0">
-<segment>
-<wire x1="-177.8" y1="147.32" x2="-55.88" y2="147.32" width="0.1524" layer="91"/>
-<wire x1="-55.88" y1="147.32" x2="-55.88" y2="208.28" width="0.1524" layer="91"/>
-<wire x1="-55.88" y1="147.32" x2="-43.18" y2="147.32" width="0.1524" layer="91"/>
-<wire x1="-43.18" y1="147.32" x2="38.1" y2="147.32" width="0.1524" layer="91"/>
-<wire x1="38.1" y1="147.32" x2="38.1" y2="208.28" width="0.1524" layer="91"/>
-<wire x1="-177.8" y1="88.9" x2="-81.28" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="-81.28" y1="88.9" x2="-43.18" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="-43.18" y1="88.9" x2="-43.18" y2="147.32" width="0.1524" layer="91"/>
-<wire x1="-43.18" y1="88.9" x2="5.08" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="5.08" y1="88.9" x2="58.42" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="58.42" y1="88.9" x2="58.42" y2="147.32" width="0.1524" layer="91"/>
-<wire x1="58.42" y1="147.32" x2="38.1" y2="147.32" width="0.1524" layer="91"/>
-<wire x1="58.42" y1="88.9" x2="121.92" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="121.92" y1="88.9" x2="152.4" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="88.9" x2="152.4" y2="147.32" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="147.32" x2="129.54" y2="147.32" width="0.1524" layer="91"/>
-<wire x1="129.54" y1="147.32" x2="58.42" y2="147.32" width="0.1524" layer="91"/>
-<wire x1="129.54" y1="147.32" x2="129.54" y2="208.28" width="0.1524" layer="91"/>
-<wire x1="203.2" y1="0" x2="203.2" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="203.2" y1="22.86" x2="203.2" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="203.2" y1="88.9" x2="203.2" y2="147.32" width="0.1524" layer="91"/>
-<wire x1="203.2" y1="147.32" x2="152.4" y2="147.32" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="88.9" x2="203.2" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="-177.8" y1="0" x2="-81.28" y2="0" width="0.1524" layer="91"/>
-<wire x1="-81.28" y1="0" x2="-81.28" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="-81.28" y1="0" x2="5.08" y2="0" width="0.1524" layer="91"/>
-<wire x1="5.08" y1="0" x2="5.08" y2="38.1" width="0.1524" layer="91"/>
-<wire x1="5.08" y1="38.1" x2="5.08" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="5.08" y1="0" x2="13.627915625" y2="0" width="0.1524" layer="91"/>
-<wire x1="13.627915625" y1="0" x2="58.42" y2="0" width="0.1524" layer="91"/>
-<wire x1="121.92" y1="38.1" x2="121.92" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="5.08" y1="38.1" x2="58.42" y2="38.1" width="0.1524" layer="91"/>
-<wire x1="58.42" y1="38.1" x2="58.42" y2="0" width="0.1524" layer="91"/>
-<wire x1="58.42" y1="0" x2="58.42" y2="-7.62" width="0.1524" layer="91"/>
-<wire x1="58.42" y1="38.1" x2="121.92" y2="38.1" width="0.1524" layer="91"/>
-<wire x1="121.92" y1="38.1" x2="121.92" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="121.92" y1="22.86" x2="203.2" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="108.085390625" y1="-7.62" x2="58.42" y2="-7.62" width="0.1524" layer="91"/>
-<wire x1="-81.28" y1="0" x2="-81.28" y2="-44.506228125" width="0.1524" layer="91"/>
-<wire x1="108.085390625" y1="-7.62" x2="108.085390625" y2="-24.432453125" width="0.1524" layer="91"/>
-<wire x1="13.627915625" y1="-44.655646875" x2="13.627915625" y2="0" width="0.1524" layer="91"/>
-<junction x="-55.88" y="147.32"/>
-<junction x="-43.18" y="147.32"/>
-<junction x="38.1" y="147.32"/>
-<junction x="-81.28" y="88.9"/>
-<junction x="-43.18" y="88.9"/>
-<junction x="5.08" y="88.9"/>
-<junction x="58.42" y="88.9"/>
-<junction x="58.42" y="147.32"/>
-<junction x="121.92" y="88.9"/>
-<junction x="152.4" y="88.9"/>
-<junction x="152.4" y="147.32"/>
-<junction x="129.54" y="147.32"/>
-<junction x="203.2" y="22.86"/>
-<junction x="203.2" y="88.9"/>
-<junction x="-81.28" y="0"/>
-<junction x="5.08" y="0"/>
-<junction x="5.08" y="38.1"/>
-<junction x="13.627915625" y="0"/>
-<junction x="58.42" y="0"/>
-<junction x="121.92" y="38.1"/>
-<junction x="58.42" y="38.1"/>
-</segment>
-</net>
 <net name="N$18" class="0">
 <segment>
 <pinref part="Q-LDO" gate="G$1" pin="S"/>
@@ -4809,6 +4752,51 @@ Stemma QT</text>
 <pinref part="D-RTC" gate="G$0" pin="CATHODE"/>
 <wire x1="147.32" y1="10.16" x2="154.94" y2="10.16" width="0.1524" layer="91"/>
 <pinref part="R-RTC-CAP" gate="G$1" pin="2"/>
+</segment>
+</net>
+<net name="N$5" class="1">
+<segment>
+<wire x1="-176.6394875" y1="151.39356875" x2="-55.88" y2="151.39356875" width="0.1524" layer="91"/>
+<wire x1="-55.88" y1="151.39356875" x2="-55.88" y2="208.28" width="0.1524" layer="91"/>
+<wire x1="-55.88" y1="151.39356875" x2="-44.063028125" y2="151.39356875" width="0.1524" layer="91"/>
+<wire x1="-44.063028125" y1="151.39356875" x2="17.78" y2="151.39356875" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="151.39356875" x2="17.78" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="147.32" x2="27.94" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="147.32" x2="27.94" y2="151.39356875" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="151.39356875" x2="38.1" y2="151.39356875" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="151.39356875" x2="58.165896875" y2="151.39356875" width="0.1524" layer="91"/>
+<wire x1="58.165896875" y1="151.39356875" x2="127" y2="151.39356875" width="0.1524" layer="91"/>
+<wire x1="127" y1="151.39356875" x2="152.111775" y2="151.39356875" width="0.1524" layer="91"/>
+<wire x1="152.111775" y1="151.39356875" x2="203.2" y2="151.39356875" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="208.28" x2="38.1" y2="151.39356875" width="0.1524" layer="91"/>
+<wire x1="127" y1="208.28" x2="127" y2="151.39356875" width="0.1524" layer="91"/>
+<wire x1="152.111775" y1="151.39356875" x2="152.111775" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="152.111775" y1="88.9" x2="203.2" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="152.111775" y1="88.9" x2="121.92" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="88.9" x2="58.165896875" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="58.165896875" y1="88.9" x2="5.569225" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="5.569225" y1="88.9" x2="-44.063028125" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="-44.063028125" y1="88.9" x2="-176.5041375" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="-44.063028125" y1="151.39356875" x2="-44.063028125" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="58.165896875" y1="151.39356875" x2="58.165896875" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="-176.635846875" y1="-0.677296875" x2="-89.38014375" y2="-0.677296875" width="0.1524" layer="91"/>
+<wire x1="-89.38014375" y1="-0.677296875" x2="5.569225" y2="-0.677296875" width="0.1524" layer="91"/>
+<wire x1="5.569225" y1="-0.677296875" x2="11.917884375" y2="-0.677296875" width="0.1524" layer="91"/>
+<wire x1="11.917884375" y1="-0.677296875" x2="58.42" y2="-0.677296875" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="-0.677296875" x2="58.42" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="-7.62" x2="107.978725" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="107.978725" y1="-24.19175625" x2="107.978725" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="-89.38014375" y1="-0.677296875" x2="-89.38014375" y2="-44.474578125" width="0.1524" layer="91"/>
+<wire x1="11.917884375" y1="-0.677296875" x2="11.917884375" y2="-44.57183125" width="0.1524" layer="91"/>
+<wire x1="5.569225" y1="88.9" x2="5.569225" y2="40.10553125" width="0.1524" layer="91"/>
+<wire x1="5.569225" y1="40.10553125" x2="5.569225" y2="-0.677296875" width="0.1524" layer="91"/>
+<wire x1="5.569225" y1="40.10553125" x2="60.396903125" y2="40.10553125" width="0.1524" layer="91"/>
+<wire x1="60.396903125" y1="40.10553125" x2="121.92" y2="40.10553125" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="40.10553125" x2="121.92" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="60.396903125" y1="40.10553125" x2="60.396903125" y2="-0.677296875" width="0.1524" layer="91"/>
+<wire x1="60.396903125" y1="-0.677296875" x2="58.42" y2="-0.677296875" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="40.10553125" x2="121.92" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="22.86" x2="203.2" y2="22.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
