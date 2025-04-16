@@ -25,7 +25,7 @@ Microcontrolerul central care coordoneaza procesarea datelor si comunicarea cu m
 - SDA  
 - SCL
 
-** Pinii de debug si programare sunt accesibili prin interfata dedicata. **
+**Pinii de debug si programare sunt accesibili prin interfata dedicata.**
 
 
 ## Memorie Externa
