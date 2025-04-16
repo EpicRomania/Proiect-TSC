@@ -9,6 +9,9 @@
 ## ESP32-C6
 
 Microcontrolerul central care coordoneaza procesarea datelor si comunicarea cu modulele.
+- Microcontroler RISC-V cu Wi-Fi 6 și Bluetooth LE.
+  
+** Controleaza interfetele SPI si I2C pentru restul modulelor. **
 
 **Pentru conectarea memoriei externe, sunt folositi urmatorii pini:**
 
@@ -22,24 +25,43 @@ Microcontrolerul central care coordoneaza procesarea datelor si comunicarea cu m
 - SDA  
 - SCL
 
-Pinii de debug si programare sunt accesibili prin interfata dedicata.
+** Pinii de debug si programare sunt accesibili prin interfata dedicata. **
+
 
 ## Memorie Externa
 
-Conectata la ESP32-C6 cu pinii: MOSI, MISO, SCK, CS.
+- Conectata prin SPI (MOSI, MISO, SCK, CS). 
 
-Stocheaza datele e-book si firmware-ul.
+- Stocheaza datele e-book si firmware-ul.
 
 ## Ceas Real si Module Senzoriale
 
-Dispozitivele de timp real si senzorii se conecteaza pe pinii SDA si SCL.
+- Dispozitivele de timp real si senzorii se conecteaza pe pinii SDA si SCL.
+- **DS3231** pentru data/ora precisa (RTC).  
+- **BME680/BME688** pentru temperatura, umiditate, presiune si VOC (aer). 
+- Aceste module asigura sincronizarea si monitorizarea mediului.
 
-Aceste module asigura sincronizarea si monitorizarea mediului.
+## Afisaj E-Paper 
+- Controlat prin interfata SPI (linii comune cu memoria externa, dar cu semnal CS separat).  
+- Are propriul circuit driver (bobina L2 si componente auxiliare).
+
+## Stocare pe card SD
+- Conectat tot pe magistrala SPI pentru extinderea posibilitatilor de stocare
+
+ ## Butoane  
+- **Reset** si **Boot** pentru controlul microcontrolerului (reprogramare, reset).
+- **Change** – buton suplimentar pentru interactiuni in aplicatie.
+
+## Management Baterie
+- **MCP73831** ca incarcator LiPo (5 V din USB-C -> LiPo).  
+- **MAX17048** ca monitor de nivel al bateriei (I2C).  
+- **USB-C** pentru alimentare, incarcare si, la nevoie, date USB.
 
 ## Aspecte de Design
 
-Componentele sunt asezate astfel incat accesul la conectori sa fie relatic simplu.
-
+- Componentele sunt asezate astfel incat accesul la conectori sa fie relatic simplu.
+- Test pads (TP) sunt disponibile pe fata placii pentru masuratori de semnal si alimentare.  
+- Circuitele de protectie ESD si de filtrare sunt incluse pentru USB-C si liniile SPI. 
 
 
 ## Bill of Materials
