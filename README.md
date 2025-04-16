@@ -11,7 +11,7 @@
 Microcontrolerul central care coordoneaza procesarea datelor si comunicarea cu modulele.
 - Microcontroler RISC-V cu Wi-Fi 6 și Bluetooth LE.
   
-** Controleaza interfetele SPI si I2C pentru restul modulelor. **
+**Controleaza interfetele SPI si I2C pentru restul modulelor.**
 
 **Pentru conectarea memoriei externe, sunt folositi urmatorii pini:**
 
