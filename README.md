@@ -1,6 +1,6 @@
 # Proiect-TSC
 
-##Block Diagram
+## Block Diagram
 
 ![](https://i.imgur.com/6ZMxgxg.jpeg)
 
